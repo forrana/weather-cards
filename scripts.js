@@ -65,5 +65,11 @@ var app = new Vue({
     vocalizeAnswer: function () {
       pronounceTheQuestion(this.includedQuestion[this.current][1])
     },
+    vocalizeQuestion: function () {
+      pronounceTheQuestion(this.includedQuestion[this.current][0])
+    }
+  },
+  mounted: function () {
+      pronounceTheQuestion(this.includedQuestion[this.current][0])
   }
 })
