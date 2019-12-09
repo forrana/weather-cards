@@ -42,18 +42,7 @@ var app = new Vue({
       return this.includedQuestion[this.current][1]
     },
     includedQuestion: function () {
-      let selectedQuestionsArray = [];
-
-      this.selectedChapters.forEach(
-        (selectedChapter) => {
-          let startIndex = (selectedChapter - 1) * 10;
-          for(let i = startIndex; i < startIndex + 10; i++) {
-            selectedQuestionsArray.push(this.questions[i]);
-          }
-        }
-      )
-
-      return selectedQuestionsArray;
+      return this.questions
     }
   },
   methods: {
